@@ -32,7 +32,7 @@ describe(Anagrams) do
       expect(test.gram_check).to(eq("pirate and party share 4 characters: prat"))
     end
     it('tests for anagrams and antigrams while ignoring non-letter characters') do
-      test = Anagrams.new("Sharpe", "fhjurt")
+      test = Anagrams.new("Sharp", "fhjurt")
       expect(test.word_check?).to(eq(false))
     end
     it('tests to check for palindromes') do

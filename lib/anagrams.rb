@@ -1,22 +1,25 @@
-
+require 'Set'
 class Anagrams
   attr_accessor(:word1, :word2)
-  attr_accessor(:word_bool)
+  attr_reader(:word_bool, :real_words, :fake_words)
   def initialize(word1,word2)
     @word1=word1
     @word2=word2
     @word_bool = false
+    @real_words =[]
+    @fake_words =[]
   end
 
   def word_check?
-    wordcheck = @word1.split(' ') + @word2.split(' ')
+    word_list = Set.new(File.readlines('lib/en.txt').collect(&:chomp))
+    wordcheck = @word1.downcase.split(' ') + @word2.downcase.split(' ')
     wordcheck.each do |x|
-      word_list = Set.new(File.readlines('lib/en.txt').collect(&:chomp))
       if (word_list.include?(x))
-        @word_bool = true
+        @real_words.push(x)
+      else
+        @fake_words.push(x)
       end
     end
-    return @word_bool
   end
 
   def gram_check
