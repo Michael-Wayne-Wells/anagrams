@@ -27,5 +27,9 @@ describe(Anagrams) do
       test = Anagrams.new()
       expect(test.gram_check?("Sharpe", "phra! se")).to(eq("Sharpe and phra! se are anagrams!"))
     end
+    it('tests for anagrams and antigrams while ignoring non-letter characters') do
+      test = Anagrams.new()
+      expect(test.word_check?("Sharpe", "fhjurt")).to(eq(false))
+    end
   end
 end
