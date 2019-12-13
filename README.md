@@ -1,19 +1,20 @@
-# _anagrams_
+# _Anagrams_
 
-#### _short description _
+#### _An anagram and antigram checker _
 
-#### By _**name**_
+#### By _**Michael Wells*_
 
 ## Description
-
+This application takes two words or phrases from user to check if they are anagrams.
 _ _
 
 |Behavior|Input|Output|
 |---|---|---|
-|   |   |   |
-|   |   |   |
-|   |   |   |
-
+| Check if two words are anagrams  |   |   |
+| Account for the possibility that words might have different cases but should still be anagrams  |   |   |
+| Add a rule to check if the inputs are words  |   |   |
+| If phrases aren't anagrams, the method should check whether they are actually "antigrams."|||
+|Account for multiple words being anagrams or "antigrams."|||
 ## Setup/Installation Requirements
 
 * _Launch <https://url.io/(---------)> in your browser._
