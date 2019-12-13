@@ -10,9 +10,9 @@ class Anagrams
           if (word1 =~ /[aeiouy]/i) & (word2 =~ /[aeiouy]/i)
             word_scan = word1.scan(/[#{word2}\s]/i).join('')
             if word_scan.length === word1.length
-              @anagrams.push(word2)
+              "#{word1} and #{word2} are anagrams!"
             elsif word_scan.length === 0
-              @antigrams.push(word2)
+              "#{word1} and #{word2} are antigrams!"
             end
           else
             return "please enter a real word"
