@@ -1,6 +1,5 @@
-require('set')
-class Anagrams
 
+class Anagrams
   attr_accessor(:word1, :word2)
   attr_accessor(:word_bool)
   def initialize(word1,word2)
@@ -8,16 +7,18 @@ class Anagrams
     @word2=word2
     @word_bool = false
   end
+
   def word_check?
-    is_word = Set.new(File.readlines('lib/en.txt').collect(&:chomp))
-    if (is_word.include?(word1)) & (is_word.include?(@word2))
-      @word_bool = true
+    wordcheck = @word1.split(' ') + @word2.split(' ')
+    wordcheck.each do |x|
+      word_list = Set.new(File.readlines('lib/en.txt').collect(&:chomp))
+      if (word_list.include?(x))
+        @word_bool = true
+      end
     end
     return @word_bool
   end
-  def palindrome_check(word)
-    word.split("") === word.split("").unshift()
-  end
+
   def gram_check
     wordcheck = word1.split(' ') + word2.split(' ')
     wordcheck.each do |x|
@@ -39,4 +40,15 @@ class Anagrams
       end
     end
   end
+
+  def palindrome_check(word)
+    word_array = []
+    word.split('').map { |e| word_array.unshift(e)}
+    if word.split('') === word_array
+      "#{word} is a palindrome!"
+    else
+      "#{word} is not a palindrome :("
+    end
+  end
+
 end

@@ -35,5 +35,10 @@ describe(Anagrams) do
       test = Anagrams.new("Sharpe", "fhjurt")
       expect(test.word_check?).to(eq(false))
     end
+    it('tests to check for palindromes') do
+      test = Anagrams.new("kayak", "steve")
+      expect(test.palindrome_check(test.word1)).to(eq("kayak is a palindrome!"))
+      expect(test.palindrome_check(test.word2)).to(eq("steve is not a palindrome :("))
+    end
   end
 end
