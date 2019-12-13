@@ -21,8 +21,7 @@ describe(Anagrams) do
     end
     it('tests for anagrams and antigrams in phrase') do
       test = Anagrams.new()
-
-      expect(test.gram_check?("Sharpe", "phr ase")).to(eq("Sharpe and phr ase are anagrams!"))
+      expect(test.gram_check?("Sharpe", "phra se")).to(eq("Sharpe and phra se are anagrams!"))
     end
   end
 end
