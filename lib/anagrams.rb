@@ -9,7 +9,6 @@ class Anagrams
     @real_words =[]
     @fake_words =[]
   end
-
   def word_check?
     word_list = Set.new(File.readlines('lib/en.txt').collect(&:chomp))
     wordcheck = @word1.downcase.split(' ') + @word2.downcase.split(' ')
@@ -21,7 +20,6 @@ class Anagrams
       end
     end
   end
-
   def gram_check
     wordcheck = word1.split(' ') + word2.split(' ')
     wordcheck.each do |x|
@@ -43,7 +41,6 @@ class Anagrams
       end
     end
   end
-
   def palindrome_check(word)
     word_array = []
     word.split('').map { |e| word_array.unshift(e)}
@@ -53,5 +50,4 @@ class Anagrams
       "#{word} is not a palindrome :("
     end
   end
-
 end

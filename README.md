@@ -1,6 +1,6 @@
 # _Anagrams_
 
-#### _An anagram and antigram checker _
+#### _An anagram and antigram checker_
 
 #### By _**Michael Wells*_
 
@@ -17,12 +17,12 @@ _ _
 |Account for multiple words being anagrams or "antigrams."|Camel Hi, Michael|Camel Hi and Michael are anagrams!|
 |check if inputted words are in word list|bury, efwe| real words: bury fake words: efwe|
 |check if word is a palindrome|kayak| kayak is a palindrome|
-
+|If words are not an antigram or anagram, return amount of matched letters|pie, eye| pie and eye share 1 letter: e|
 
 ## Setup/Installation Requirements
 * clone and open the file locally
 * _in terminal run:_
->$ git clone https://url/(------).git
+>$ git clone https://github.com/Michael-Wayne-Wells/anagrams.git
 
 * _navigate to project folder and install gem bundles_
 >$ cd anagrams
@@ -47,7 +47,7 @@ _This program utilized:_
 * _RUBY_
 * _rspec_
 
-Ascii text art generated on [http://patorjk.com/software/taag/#p=testall&f=Graffiti&t=Antigrams] Patrick Gillespie
+Ascii text art generated on http://patorjk.com/software/taag/#p=testall&f=Graffiti&t=Antigrams by Patrick Gillespie
 
 _and was built on Atom_
 ### License
