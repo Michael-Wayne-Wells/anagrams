@@ -19,9 +19,13 @@ describe(Anagrams) do
       test = Anagrams.new()
       expect(test.gram_check?("hi", "bye")).to(eq("hi and bye are antigrams!"))
     end
-    it('tests for anagrams and antigrams in phrase') do
+    it('tests for anagrams and antigrams while ignoring whitespace') do
       test = Anagrams.new()
       expect(test.gram_check?("Sharpe", "phra se")).to(eq("Sharpe and phra se are anagrams!"))
+    end
+    it('tests for anagrams and antigrams while ignoring non-letter characters') do
+      test = Anagrams.new()
+      expect(test.gram_check?("Sharpe", "phra! se")).to(eq("Sharpe and phra! se are anagrams!"))
     end
   end
 end
