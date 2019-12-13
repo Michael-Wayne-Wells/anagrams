@@ -4,36 +4,36 @@ require('anagrams')
 describe(Anagrams) do
   describe('#gram_check') do
     it('tests if two words are anagrams') do
-      test = Anagrams.new()
-      expect(test.gram_check("ruby", "bury")).to(eq("ruby and bury are anagrams!"))
+      test = Anagrams.new("ruby", "bury")
+      expect(test.gram_check).to(eq("ruby and bury are anagrams!"))
     end
     it('tests if two words are anagrams even if has different capital letters') do
-      test = Anagrams.new()
-      expect(test.gram_check("Ruby", "Bury")).to(eq("Ruby and Bury are anagrams!"))
+      test = Anagrams.new("Ruby", "Bury")
+      expect(test.gram_check).to(eq("Ruby and Bury are anagrams!"))
     end
     it('tests if words contain a vowel') do
-      test = Anagrams.new()
-      expect(test.gram_check("ctrb", "brct")).to(eq("please enter a real word"))
+      test = Anagrams.new("ctrb", "brct")
+      expect(test.gram_check).to(eq("please enter a real word"))
     end
     it('tests if words are an antigram') do
-      test = Anagrams.new()
-      expect(test.gram_check("hi", "bye")).to(eq("hi and bye are antigrams!"))
+      test = Anagrams.new("hi", "bye")
+      expect(test.gram_check).to(eq("hi and bye are antigrams!"))
     end
     it('tests for anagrams and antigrams while ignoring whitespace') do
-      test = Anagrams.new()
-      expect(test.gram_check("Sharpe", "phra se")).to(eq("Sharpe and phra se are anagrams!"))
+      test = Anagrams.new("Sharpe", "phra se")
+      expect(test.gram_check).to(eq("Sharpe and phra se are anagrams!"))
     end
     it('tests for anagrams and antigrams while ignoring non-letter characters') do
-      test = Anagrams.new()
-      expect(test.gram_check("Sharpe", "phra! se")).to(eq("Sharpe and phra! se are anagrams!"))
+      test = Anagrams.new("Sharpe", "phra! se")
+      expect(test.gram_check).to(eq("Sharpe and phra! se are anagrams!"))
     end
     it('returns count of matching characters when not an anagram or antigram') do
-      test = Anagrams.new()
-      expect(test.gram_check("pirate", "party")).to(eq("pirate and party share 4 characters: prat"))
+      test = Anagrams.new("pirate", "party")
+      expect(test.gram_check).to(eq("pirate and party share 4 characters: prat"))
     end
     it('tests for anagrams and antigrams while ignoring non-letter characters') do
-      test = Anagrams.new()
-      expect(test.word_check?("Sharpe", "fhjurt")).to(eq(false))
+      test = Anagrams.new("Sharpe", "fhjurt")
+      expect(test.word_check?).to(eq(false))
     end
   end
 end
