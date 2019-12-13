@@ -10,20 +10,27 @@ _ _
 
 |Behavior|Input|Output|
 |---|---|---|
-| Check if two words are anagrams  |   |   |
-| Account for the possibility that words might have different cases but should still be anagrams  |   |   |
-| Add a rule to check if the inputs are words  |   |   |
-| If phrases aren't anagrams, the method should check whether they are actually "antigrams."|||
-|Account for multiple words being anagrams or "antigrams."|||
-## Setup/Installation Requirements
+| Check if two words are anagrams  | ruby, bury  | "ruby and bury are anagrams!"  |
+| Account for the possibility that words might have different cases but should still be anagrams  | RuBy, bUry  |RuBy and bUry are anagrams!   |
+| check if the inputs are words by checking for vowel usage  |  trdg |  please enter a real word |
+| If phrases aren't anagrams, the method should check whether they are actually "antigrams."|try, sad| tray and sad are antigrams!|
+|Account for multiple words being anagrams or "antigrams."|Camel Hi, Michael|Camel Hi and Michael are anagrams!|
+|check if inputted words are in word list|bury, efwe| real words: bury fake words: efwe|
+|check if word is a palindrome|kayak| kayak is a palindrome|
 
-* _Launch <https://url.io/(---------)> in your browser._
-### OR ###
+
+## Setup/Installation Requirements
 * clone and open the file locally
 * _in terminal run:_
->$git clone https://url/(------).git
-* _open index.html in your browser._
+>$ git clone https://url/(------).git
 
+* _navigate to project folder and install gem bundles_
+>$ cd anagrams
+>$ gem install bundler
+>$ bundle install
+
+* _run program script in terminal_
+>$ ruby anagrams_script.rb
 
 
 ## Known Bugs
@@ -38,9 +45,13 @@ _If you have any issues with the program or want to reach out, email ['mwells128
 
 _This program utilized:_
 * _RUBY_
+* _rspec_
+
+Ascii text art generated on [http://patorjk.com/software/taag/#p=testall&f=Graffiti&t=Antigrams] Patrick Gillespie
+
 _and was built on Atom_
 ### License
 
 *Licensed under MIT license*
 
-Copyright (c) 2019 **_name_**
+Copyright (c) 2019 **_Michael Wells_**

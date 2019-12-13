@@ -1,7 +1,7 @@
 #!/usr/bin/ruby
 require('./lib/anagrams')
 
-
+puts File.read('./lib/title.txt')
 puts "Welcome to Anagram Checker!"
 puts "enter first word:"
 word1 = gets.chomp
