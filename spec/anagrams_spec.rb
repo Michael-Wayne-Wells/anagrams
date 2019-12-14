@@ -24,8 +24,8 @@ describe(Anagrams) do
       expect(test.gram_check).to(eq("Sharpe and phra se are anagrams!"))
     end
     it('tests for anagrams and antigrams while ignoring non-letter characters') do
-      test = Anagrams.new("Sharpe", "phra! se")
-      expect(test.gram_check).to(eq("Sharpe and phra! se are anagrams!"))
+      test = Anagrams.new("Sha, rpe", "phra! se")
+      expect(test.gram_check).to(eq("Sha, rpe and phra! se are anagrams!"))
     end
     it('returns count of matching characters when not an anagram or antigram') do
       test = Anagrams.new("pirate", "party")
